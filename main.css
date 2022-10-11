@@ -1,0 +1,776 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body {
+    line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    outline: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+.buy-now {
+    padding: 15px 40px;
+    background-color: #F7C6BC;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #240871;
+    text-transform: uppercase;
+    border-radius: 25px;
+    height: 54px;
+    line-height: 26px;
+    box-shadow: 0 0 10px 0 #f1947f;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mr-5 {
+    margin-right: 5px !important;
+}
+
+.ml-5 {
+    margin-left: 5px !important;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.container {
+
+    padding: 10px;
+}
+
+.header-overlay {
+    background-image: url(https://simpleweb.cdn.vccloud.vn/wp-content/uploads/2021/03/desktop-wallpaper-petal-sky-pattern-pink-twinkling-stars-eccfef3f799927333016a2bafb3994f8.png);
+    opacity: 0.35;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+    background-color: #240871;
+    position: relative;
+}
+
+.header .header-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-info .info-heading strong {
+    font-size: 93px;
+}
+
+.header-info .info-heading {
+    font-size: 65px;
+    font-family: 'Anton', sans-serif;
+    color: #f7c6bc;
+    margin-bottom: 65px;
+}
+
+.header .info-img img {
+    width: 243px;
+    height: auto;
+}
+
+.header-info .info-animation {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.info-animation h3 {
+    font-size: 25px;
+    font-weight: 400;
+    font-family: "Montserrat", Sans-serif;
+    color: #f7c6bc;
+    letter-spacing: 2px;
+    margin-left: 100px;
+}
+
+.info-animation i {
+    font-size: 46px;
+    color: #F1947F;
+    border-color: #F1947F;
+    margin-left: 20px;
+
+}
+
+.info-product {
+    text-align: center;
+    width: 100%;
+}
+
+.info-product .info-sales {
+    font-size: 30px;
+    font-family: "Montserrat Alternates", Sans-serif;
+    color: #F7C6BC;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.info-product .info-name {
+    font-family: "Montserrat Alternates", Sans-serif;
+    color: #F1947F;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.header-img {
+    background-color: transparent;
+    background-image: radial-gradient(at center center, rgba(255, 255, 255, .32) 0%, rgba(242, 41, 91, 0) 75%);
+}
+
+.header-img img {
+    width: 540px;
+}
+
+
+/* section product */
+.product {
+    background-color: #240871;
+}
+
+.product-img {
+    padding: 10px;
+    margin-top: 20px;
+    background-color: transparent;
+    background-image: radial-gradient(at center center, rgba(255, 255, 255, .32) 0%, rgba(242, 41, 91, 0) 75%);
+}
+
+.product-img img {
+    width: 540px;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-detail {
+    padding: 10px;
+}
+
+.product-detail .detail-heading {
+    position: relative;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 240px;
+}
+
+.product-detail .heading-top {
+    font-family: 'Bungee Outline';
+    font-size: 190px;
+    font-weight: 500;
+    text-shadow: 5px 4px 0 #3c1d72;
+    color: rgba(247, 198, 188, .26);
+    text-align: center;
+}
+
+.product-detail .heading-bottom {
+    font-family: 'Anton', sans-serif;
+    font-size: 60px;
+    color: #F7C6BC;
+    font-weight: 400;
+    text-shadow: 5px 4px 0 #3c1d72;
+    position: absolute;
+    bottom: 0px;
+    letter-spacing: 2px;
+    width: 100%;
+}
+
+.product-detail .detail-list {
+    list-style: none;
+}
+
+.product-detail .detail-item {
+    margin: 8px 0;
+}
+
+.product-detail .detail-item-icon {
+    font-size: 20px;
+    color: #F7C6BC;
+    padding-right: 8px;
+}
+
+.product-detail .detail-item-text {
+    font-size: 20px;
+    font-weight: 200;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+}
+
+/* buy product */
+.container.p-0 {
+    padding: 0;
+}
+
+.buy {
+    background-color: #240871;
+}
+
+.buy-wrapper {
+    padding: 20px;
+}
+
+.buy-product-container {
+    border: 1px solid #F7C6BC;
+    display: flex;
+    height: 101px;
+    border-radius: 20px;
+    padding: 0 35px;
+    align-items: center;
+}
+
+.buy-product-container .product-buy-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.buy-product-container .product-buy-btn::after {
+    content: "";
+    border-left: 1px solid #98719a;
+    height: 80px;
+}
+
+/* .buy-product-container .buy-btn {
+    padding: 15px 40px;
+    background-color: #F7C6BC;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #240871;
+    text-transform: uppercase;
+    border-radius: 25px;
+    height: 54px;
+    line-height: 26px;
+    box-shadow: 0 0 10px 0 #f1947f;
+} */
+
+.buy-product-container .time {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+    margin: 0;
+    width: 288px;
+    justify-content: center;
+}
+
+.buy-product-container .time li {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 60px;
+}
+
+.buy-product-container .number {
+    font-size: 30px;
+    color: #F1947F;
+    font-family: "Anton", Sans-serif;
+    text-align: center;
+}
+
+.buy-product-container .text {
+    font-size: 13px;
+    color: #FFF;
+    font-family: "Open Sans", Sans-serif;
+    text-align: center;
+}
+
+.product-price {
+    margin-right: 35px;
+    flex: 1;
+    padding-left: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-price .old-price {
+    font-family: "Open Sans", Sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: line-through;
+    color: #fff;
+}
+
+.product-price .current-price {
+    color: #F7C6BC;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0
+}
+
+/* gift */
+.gift {
+    background-color: #240871;
+    width: 100%;
+    height: 878px;
+    padding: 60px 0;
+    position: relative;
+}
+
+.gift .container {}
+
+.gift-overlay {
+    background-image: url(https://simpleweb.cdn.vccloud.vn/wp-content/uploads/2021/03/orange-undulated-lines-33f7ae78e37afffe41aa2c5460cf67a9-3.png);
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.gift-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gift-content .gift-header-top {
+    color: #F7C6BC;
+    font-family: "Anton", sans-serif;
+    font-size: 70px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.gift-content img {
+    width: 45%;
+    height: auto;
+    object-fit: cover;
+    z-index: 10;
+}
+
+.gift-content .gift-header-bottom {
+    color: rgba(247, 198, 188, .47);
+    font-family: "Bungee Outline", Sans-serif;
+    font-size: 80px;
+    font-weight: 500;
+    letter-spacing: -4px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: -40px;
+}
+
+.gift-content .gift-buy {
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: 54px;
+    margin-top: 20px;
+}
+
+/* section select color */
+.select-color {
+    width: 100%;
+    height: 100%;
+    background-color: #240871;
+    padding-top: 110px;
+    position: relative;
+}
+
+.select-color .select-color-background {
+    margin-right: 30px;
+    padding: 10px;
+    background-color: transparent;
+    background-image: linear-gradient(150deg, #F1947F 0%, rgba(247, 198, 188, 0) 93%);
+    height: 274px;
+    border-radius: 15px;
+}
+
+.select-color .select-color-img {
+    position: absolute;
+    bottom: 12px;
+    z-index: 10;
+    transform: translateX(-12%);
+}
+
+.select-color .select-color-img img {
+    width: 442px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* flip cards */
+.flip-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flip-card-item {
+    height: 125px;
+    width: 100%;
+}
+
+.flip-card-item .flip-card-inner {
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-item .flip-card-front {
+    width: 100%;
+    height: 100%;
+
+}
+
+.flip-card-item .flip-card-front img {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    border: 1px solid #f7c6bc;
+    object-fit: cover;
+}
+
+.flip-card-inner {
+    background-position: center center;
+    background-size: cover;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #F7C6BC;
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+/* section review */
+.review {
+    width: 100%;
+    background-color: #240871;
+    padding: 60px 0 20px 0;
+}
+
+.review .review-content {
+    width: 100%;
+}
+
+.review.container {
+    padding: 10px;
+}
+
+.review .review-body {
+    width: 100%;
+    display: flex;
+}
+
+.review .review-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.review .review-title {
+    color: #F7C6BC;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0;
+    margin-bottom: 16px;
+}
+
+.review .review-heading {
+    color: #F7C6BC;
+    font-family: "Anton", Sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 5px 4px 0 rgb(60 29 114 / 97%);
+}
+
+.review .review-body-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 10px 10px;
+}
+
+.review .review-text {
+    padding: 25px 25px 65px 25px;
+    background-color: transparent;
+    background-image: linear-gradient(100deg, #F1947F 0%, rgba(241, 148, 127, .24) 100%);
+    border-radius: 15px 15px 15px 15px;
+    position: relative;
+}
+
+.review .review-text p {
+    color: #FFF;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 17.5px;
+    font-weight: 100;
+    line-height: 25px;
+    margin: 0;
+}
+
+.review .review-quote-icon {
+    width: 100%;
+    text-align: right;
+    position: absolute;
+    bottom: 70px;
+    right: 30px;
+}
+
+.review .review-quote-icon i {
+    margin-right: 30px;
+    font-size: 70px;
+    color: #F7C6BC;
+    border-color: #F7C6BC;
+}
+
+.review .reivewer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.review .reivewer img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.review .reviewer-detail {
+    margin: 20px 0 0 15px;
+}
+
+.review .reviewer-detail .review-name {
+    color: #FFF;
+    font-family: "Trirong", Sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: .7px;
+    margin: 0;
+}
+
+.review .reviewer-detail .reviewer-customer{
+    color: #F1947F;
+    font-family: "Open Sans",Sans-serif;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* section order */
+.order {
+    width: 100%;
+    background-color: #240871;
+    padding-top: 40px;
+}
+
+.order.container {
+    padding: 10px;
+}
+
+.order-header {
+    display: flex;
+    width: 100%;
+    margin-bottom: -36px;
+    padding-right: 300px;
+}
+
+.order-header-img {
+    width: 38%;
+    padding: 10px;
+}
+
+.order-header-img img {
+    
+    height: auto;
+    object-fit: cover;
+}
+
+.order .order-heading{
+    text-align: right;
+    color: #F7C6BC;
+    font-family: "Anton";
+    font-size: 55px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 74px;
+    letter-spacing: 2px;
+    text-shadow: 5px 4px 0 rgb(60 29 114 / 97%);
+}
+
+.order-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.order-content .order-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-content .order-img{
+    width: 100%;
+    padding: 50px 10px 10px 10px;
+}
+
+.order-content .order-img img {
+    z-index: 10;
+    object-fit: cover;
+    width: 90%;
+    position: relative;
+}
+
+.order-content .background-overlay{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://simpleweb.cdn.vccloud.vn/wp-content/uploads/2021/03/desktop-wallpaper-petal-sky-pattern-pink-twinkling-stars-eccfef3f799927333016a2bafb3994f8.png);
+    background-position: center center;
+    background-size: cover;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.order-content .order-wrapper{
+    height: 100%;
+}
+
+.order-content .order-form {
+    height: 520px;
+    margin: 130px 20px 130px 0;
+    padding: 0 40px;
+    background-color: #fff;
+    background-color: transparent;
+    background-image: linear-gradient(110deg,#F1947F 20%,rgba(242,41,91,0) 100%);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.order-form .form-heading {
+    color: #FFF;
+    font-family: "Open Sans",Sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 29px;
+    letter-spacing: 0;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.order-form .form-desc {
+    color: #FFF;
+    font-family: "Montserrat Alternates",Sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.order-form .form-input, .form-text-area {
+    background-color: #FFF;
+    border-color: #F1947F;
+    border-radius: 4px 4px 4px 4px;
+    margin-bottom: 10px;
+    outline: none;
+    font-family: "Open Sans",Sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: #020101;
+    padding: 4px 12px;
+    border: none;
+}
+
+.order-form .form-text-area{
+   height: 110px;
+}
+
+.order-form .form-btn {
+    background-color: #2A4558;
+    font-family: "Open Sans",Sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 10px 10px 10px 10px;
+    padding: 9px 0 9px 0;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.footer {
+    width: 100%;
+    padding: 50px 0 40px 0;
+    background-color: transparent;
+    background-image: linear-gradient(180deg,#240871 0%,#0D3B98 100%);
+}
+
+.footer-container {
+    width: 100%;
+}
+
+.list-service {
+    width: 100%;
+    display: flex;
+}
