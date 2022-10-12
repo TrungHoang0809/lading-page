@@ -68,6 +68,77 @@ h6 {
     }
 }
 
+@keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(.4);
+        transform: scale(.4);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+@keyframes shake-lr {
+
+    0%,
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%
+    }
+
+    10% {
+        -webkit-transform: rotate(8deg);
+        transform: rotate(8deg)
+    }
+
+    20%,
+    40%,
+    60% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg)
+    }
+
+    30%,
+    50%,
+    70% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg)
+    }
+
+    80% {
+        -webkit-transform: rotate(-8deg);
+        transform: rotate(-8deg)
+    }
+
+    90% {
+        -webkit-transform: rotate(8deg);
+        transform: rotate(8deg)
+    }
+}
+
+@keyframes pulsate-bck {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    50% {
+        -webkit-transform: scale(.9);
+        transform: scale(.9)
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
 .buy-now {
     padding: 15px 40px;
     background-color: #F7C6BC;
@@ -101,6 +172,10 @@ h6 {
 .container {
 
     padding: 10px;
+}
+
+.main {
+    position: relative;
 }
 
 .header-overlay {
@@ -797,13 +872,14 @@ h6 {
     text-transform: uppercase;
     text-align: center;
 }
+
 /* -------- section buy bottom -------- */
 
-.pl-120{
+.pl-120 {
     padding: 20px 120px;
 }
 
-.time.justify-around{
+.time.justify-around {
     justify-content: space-around;
 }
 
@@ -898,3 +974,119 @@ h6 {
     color: white;
 }
 
+/* social media */
+.social-media {
+    width: 100px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.social-media .list-social {
+    margin: 200px 0 30px 30px;
+}
+
+.list-social .social-item {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+}
+
+.list-social .social-item a {
+    color: #fff;
+}
+
+.social-item.call {
+    background-color: #de1515;
+}
+
+.social-item.facebook {
+    background-color: #1b4bba;
+}
+
+.social-item.email {
+    background-color: #618612;
+}
+
+.social-item.bell {
+    background-color: #ffa62a;
+}
+
+.phone {
+    position: relative;
+    left: 20px;
+}
+
+.phone-icon {}
+
+.circle-line {
+    width: 85px;
+    height: 85px;
+    border: 3px solid rgba(232, 108, 14, .59);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    animation: scale-in-center 1s cubic-bezier(.25, .46, .45, .94) infinite forwards;
+}
+
+.phone-icon>.background-overlay {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: rgba(232, 108, 14, .59);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    animation: pulsate-bck 2s ease-in-out infinite both;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #E86C0E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    animation: shake-lr 1.5s infinite cubic-bezier(.455, .03, .515, .955) alternate;
+}
+
+.icon img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.phone-number {
+    height: 32px;
+    width: 130px;
+    color: white;
+    background-color: #E86C0E;
+    border-radius: 16px;
+    text-align: right;
+    font-family: "open-sans";
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 32px;
+    padding-right: 8px;
+    position: absolute;
+    top: 24px;
+    left: 56px;
+}
+
+.phone-number a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
