@@ -309,20 +309,6 @@ h6 {
     height: 80px;
 }
 
-/* .buy-product-container .buy-btn {
-    padding: 15px 40px;
-    background-color: #F7C6BC;
-    font-family: 'Maven Pro', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: #240871;
-    text-transform: uppercase;
-    border-radius: 25px;
-    height: 54px;
-    line-height: 26px;
-    box-shadow: 0 0 10px 0 #f1947f;
-} */
-
 .buy-product-container .time {
     display: flex;
     align-items: center;
@@ -502,7 +488,7 @@ h6 {
     perspective: 1000px;
 }
 
-.flip-card-item:hover .flip-card-inner{
+.flip-card-item:hover .flip-card-inner {
     transform: rotateX(180deg);
 }
 
@@ -540,13 +526,13 @@ h6 {
 .flip-card-item .flip-card-title {
     color: #fff;
     margin-bottom: 10px;
-    font-family: "Open Sans",Sans-serif;
+    font-family: "Open Sans", Sans-serif;
     font-size: 22px;
     font-weight: 500;
 }
 
 .flip-card-item .flip-card-desc {
-    font-family: "Open Sans",Sans-serif;
+    font-family: "Open Sans", Sans-serif;
     font-size: 14.5px;
     color: #fff;
 }
@@ -811,6 +797,17 @@ h6 {
     text-transform: uppercase;
     text-align: center;
 }
+/* -------- section buy bottom -------- */
+
+.pl-120{
+    padding: 20px 120px;
+}
+
+.time.justify-around{
+    justify-content: space-around;
+}
+
+/* -------- footer -------- */
 
 .footer {
     width: 100%;
@@ -819,11 +816,85 @@ h6 {
     background-image: linear-gradient(180deg, #240871 0%, #0D3B98 100%);
 }
 
+.footer .footer-info {
+    width: 100%;
+    padding: 25px 20px;
+}
+
+.footer-info .footer-header {
+    margin-bottom: 20px;
+}
+
+
+
+.footer-info .info-list {
+    list-style: none;
+    color: #fff;
+    margin: 0;
+}
+
+.footer-info .info-item,
+.list-service .service-item {
+    display: flex;
+    padding-bottom: 6px;
+    margin-top: 6px;
+}
+
+.footer-info .info-item:first-child {
+    margin-top: 0;
+}
+
+.footer-info .info-item i,
+.list-service .service-item i {
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.footer-info .info-item p,
+.list-service .service-item p {
+    font-size: 18px;
+    margin: 0;
+    font-family: "Montserrat";
+}
+
 .footer-container {
     width: 100%;
+    display: flex;
+}
+
+.footer .footer-service {
+    padding: 25px 20px;
+}
+
+.footer-info .footer-header h3,
+.footer-service .service-header h3 {
+    color: #fff;
+    font-family: "Open Sans";
+    font-size: 23px;
+    line-height: 29px;
+    letter-spacing: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.footer-service .service-header {
+    margin-bottom: 20px;
 }
 
 .list-service {
     width: 100%;
     display: flex;
 }
+
+.list-service ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+}
+
+.list-service .service-item {
+    display: flex;
+    color: white;
+}
+
