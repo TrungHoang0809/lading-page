@@ -46,6 +46,28 @@ h6 {
     overflow-wrap: break-word;
 }
 
+@keyframes slide-in-blurred-left {
+    0% {
+        -webkit-transform: translateX(-500px) scaleX(2.5) scaleY(.2);
+        transform: translateX(-500px) scaleX(2.5) scaleY(.2);
+        -webkit-transform-origin: 100% 50%;
+        transform-origin: 100% 50%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0
+    }
+
+    100% {
+        -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+        transform: translateX(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1
+    }
+}
+
 .buy-now {
     padding: 15px 40px;
     background-color: #F7C6BC;
@@ -135,6 +157,8 @@ h6 {
     color: #f7c6bc;
     letter-spacing: 2px;
     margin-left: 100px;
+    animation: slide-in-blurred-left 2s cubic-bezier(.23, 1, .32, 1) infinite alternate-reverse both;
+    ;
 }
 
 .info-animation i {
@@ -366,8 +390,6 @@ h6 {
     position: relative;
 }
 
-.gift .container {}
-
 .gift-overlay {
     background-image: url(https://simpleweb.cdn.vccloud.vn/wp-content/uploads/2021/03/orange-undulated-lines-33f7ae78e37afffe41aa2c5460cf67a9-3.png);
     width: 100%;
@@ -464,6 +486,8 @@ h6 {
 .flip-card-item {
     height: 125px;
     width: 100%;
+    perspective: 1000px;
+    background-color: transparent;
 }
 
 .flip-card-item .flip-card-inner {
@@ -471,32 +495,60 @@ h6 {
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.flip-card-item:hover .flip-card-inner{
+    transform: rotateX(180deg);
 }
 
 .flip-card-item .flip-card-front {
-    width: 100%;
-    height: 100%;
-
+    border: 1px solid #f7c6bc;
 }
 
 .flip-card-item .flip-card-front img {
     width: 100%;
     height: 100%;
-    background-position: center center;
-    background-size: cover;
-    border: 1px solid #f7c6bc;
     object-fit: cover;
 }
 
-.flip-card-inner {
-    background-position: center center;
-    background-size: cover;
-    border-style: solid;
-    border-width: 1px 1px 1px 1px;
-    border-color: #F7C6BC;
-    perspective: 1000px;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+.flip-card-item .flip-card-front,
+.flip-card-item .flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+.flip-card-item .flip-card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: rotateX(180deg);
+    background-color: transparent;
+    background-image: linear-gradient(150deg, #F1947F 0%, rgba(242, 41, 91, 0) 100%);
+}
+
+.flip-card-item .flip-card-title {
+    color: #fff;
+    margin-bottom: 10px;
+    font-family: "Open Sans",Sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.flip-card-item .flip-card-desc {
+    font-family: "Open Sans",Sans-serif;
+    font-size: 14.5px;
+    color: #fff;
 }
 
 /* section review */
@@ -608,9 +660,9 @@ h6 {
     margin: 0;
 }
 
-.review .reviewer-detail .reviewer-customer{
+.review .reviewer-detail .reviewer-customer {
     color: #F1947F;
-    font-family: "Open Sans",Sans-serif;
+    font-family: "Open Sans", Sans-serif;
     font-size: 15px;
     margin: 0;
 }
@@ -639,12 +691,12 @@ h6 {
 }
 
 .order-header-img img {
-    
+
     height: auto;
     object-fit: cover;
 }
 
-.order .order-heading{
+.order .order-heading {
     text-align: right;
     color: #F7C6BC;
     font-family: "Anton";
@@ -667,7 +719,7 @@ h6 {
     flex-direction: column;
 }
 
-.order-content .order-img{
+.order-content .order-img {
     width: 100%;
     padding: 50px 10px 10px 10px;
 }
@@ -679,7 +731,7 @@ h6 {
     position: relative;
 }
 
-.order-content .background-overlay{
+.order-content .background-overlay {
     width: 100%;
     height: 100%;
     background-image: url(https://simpleweb.cdn.vccloud.vn/wp-content/uploads/2021/03/desktop-wallpaper-petal-sky-pattern-pink-twinkling-stars-eccfef3f799927333016a2bafb3994f8.png);
@@ -691,7 +743,7 @@ h6 {
     left: 0;
 }
 
-.order-content .order-wrapper{
+.order-content .order-wrapper {
     height: 100%;
 }
 
@@ -701,7 +753,7 @@ h6 {
     padding: 0 40px;
     background-color: #fff;
     background-color: transparent;
-    background-image: linear-gradient(110deg,#F1947F 20%,rgba(242,41,91,0) 100%);
+    background-image: linear-gradient(110deg, #F1947F 20%, rgba(242, 41, 91, 0) 100%);
     border-radius: 25px;
     display: flex;
     justify-content: center;
@@ -709,7 +761,7 @@ h6 {
 
 .order-form .form-heading {
     color: #FFF;
-    font-family: "Open Sans",Sans-serif;
+    font-family: "Open Sans", Sans-serif;
     font-size: 23px;
     font-weight: 500;
     text-transform: uppercase;
@@ -721,7 +773,7 @@ h6 {
 
 .order-form .form-desc {
     color: #FFF;
-    font-family: "Montserrat Alternates",Sans-serif;
+    font-family: "Montserrat Alternates", Sans-serif;
     font-size: 19px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -729,13 +781,14 @@ h6 {
     margin-bottom: 15px;
 }
 
-.order-form .form-input, .form-text-area {
+.order-form .form-input,
+.form-text-area {
     background-color: #FFF;
     border-color: #F1947F;
     border-radius: 4px 4px 4px 4px;
     margin-bottom: 10px;
     outline: none;
-    font-family: "Open Sans",Sans-serif;
+    font-family: "Open Sans", Sans-serif;
     font-size: 17px;
     font-weight: 500;
     color: #020101;
@@ -743,13 +796,13 @@ h6 {
     border: none;
 }
 
-.order-form .form-text-area{
-   height: 110px;
+.order-form .form-text-area {
+    height: 110px;
 }
 
 .order-form .form-btn {
     background-color: #2A4558;
-    font-family: "Open Sans",Sans-serif;
+    font-family: "Open Sans", Sans-serif;
     font-size: 22px;
     font-weight: 700;
     border-radius: 10px 10px 10px 10px;
@@ -763,7 +816,7 @@ h6 {
     width: 100%;
     padding: 50px 0 40px 0;
     background-color: transparent;
-    background-image: linear-gradient(180deg,#240871 0%,#0D3B98 100%);
+    background-image: linear-gradient(180deg, #240871 0%, #0D3B98 100%);
 }
 
 .footer-container {
