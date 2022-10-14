@@ -214,7 +214,7 @@ h6 {
 }
 
 .header .info-img img {
-    width: 243px;
+    max-width: 243px;
     height: auto;
 }
 
@@ -234,6 +234,10 @@ h6 {
     margin-left: 100px;
     animation: slide-in-blurred-left 2s cubic-bezier(.23, 1, .32, 1) infinite alternate-reverse both;
     ;
+}
+
+.info-animation .icon-down {
+    display: none;
 }
 
 .info-animation i {
@@ -425,7 +429,12 @@ h6 {
     justify-content: center;
 }
 
-.product-price .old-price {
+.short-product-price {
+    display: none;
+}
+
+.product-price .old-price,
+.short-product-price .old-price {
     font-family: "Open Sans", Sans-serif;
     font-size: 20px;
     font-weight: 400;
@@ -433,10 +442,11 @@ h6 {
     color: #fff;
 }
 
-.product-price .current-price {
+.product-price .current-price,
+.short-product-price .current-price {
     color: #F7C6BC;
     font-family: "Open Sans", Sans-serif;
-    font-size: 28px;
+    font-size: 27px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0
@@ -451,6 +461,10 @@ h6 {
     position: relative;
 }
 
+.gift > .container {
+    z-index: 10;
+}
+
 .gift-overlay {
     background-image: url(https://simpleweb.cdn.vccloud.vn/wp-content/uploads/2021/03/orange-undulated-lines-33f7ae78e37afffe41aa2c5460cf67a9-3.png);
     width: 100%;
@@ -459,7 +473,6 @@ h6 {
     background-position: center center;
     background-size: cover;
     position: absolute;
-    z-index: 1;
     top: 0;
     left: 0;
 }
@@ -504,6 +517,7 @@ h6 {
     text-align: center;
     height: 54px;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 /* section select color */
@@ -522,17 +536,19 @@ h6 {
     background-image: linear-gradient(150deg, #F1947F 0%, rgba(247, 198, 188, 0) 93%);
     height: 274px;
     border-radius: 15px;
+    position: relative;
 }
 
 .select-color .select-color-img {
     position: absolute;
     bottom: 12px;
+    left: 50%;
     z-index: 10;
-    transform: translateX(-12%);
+    transform: translateX(-54%);
 }
 
 .select-color .select-color-img img {
-    width: 442px;
+    max-width: 442px;
     height: auto;
     object-fit: cover;
 }
@@ -712,7 +728,7 @@ h6 {
     margin: 20px 0 0 15px;
 }
 
-.review .reviewer-detail .review-name {
+.review .reviewer-detail .reviewer-name {
     color: #FFF;
     font-family: "Trirong", Sans-serif;
     font-size: 20px;
@@ -976,12 +992,14 @@ h6 {
 
 /* social media */
 .social-media {
-    width: 100px;
+    max-width: 100px;
+    min-width: 50px;
     height: 100%;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
+    z-index: 100;
 }
 
 .social-media .list-social {
