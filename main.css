@@ -46,6 +46,10 @@ h6 {
     overflow-wrap: break-word;
 }
 
+html,body{
+    overflow-x: hidden;
+}
+
 @keyframes slide-in-blurred-left {
     0% {
         -webkit-transform: translateX(-500px) scaleX(2.5) scaleY(.2);

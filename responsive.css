@@ -539,8 +539,8 @@
         margin: 4px 0;
     }
 
-    .buy-wrapper {
-        padding: 20px 0;
+    .buy-top .buy-wrapper {
+        padding: 20px 10px;
     }
 
     .buy-product-container {
@@ -693,7 +693,7 @@
     }
 
     .order-content .order-form {
-        margin: 130px 0 60px 0;
+        margin: 130px 10px 60px 10px;
     }
 
     .order-content .order-img {
@@ -781,71 +781,16 @@
     .mh-230 {
         max-height: 230px;
     }
-}
 
-/* @media (max-width: 575px) {
-    .social-media .list-social {
-        display: none;
-    }
-    .phone {
-        top: 50%;
-        left: 4px;
-    }
-
-    .buy-wrapper {
-        padding: 20 0;
-    }
-
-    .buy-product-container {
-        height: 285px;
-        padding: 25px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .product-buy-btn {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .buy-product-container .product-buy-btn::after {
-        display: none;
-    }
-
-    .buy-top .buy-now {
-        height: 42px;
-        font-size: 20px;
-        line-height: 8px;
-        padding: 18px 26px;
-        margin-bottom: 20px;
-    }
-
-    .buy-top .buy-product-container .time {
-        margin-bottom: 20px;
-        border-top: 1px solid rgba(247, 198, 188, .55);
-        border-bottom: 1px solid rgba(247, 198, 188, .55);
-        width: 100%;
-        padding-bottom: 15px;
-        padding-top: 5px;
-    }
-
-    .buy-top .product-price {
-        padding-left: 0;
-        margin-right: 0;
-        text-align: center;
-    }
-
-    .buy-top .product-price .old-price {
-        font-size: 18px;
-
-    }
-
-    .buy-top .product-price .current-price {
-        font-size: 24px;
+    .footer-info .info-item i, .list-service .service-item i {
+        font-size: 15px;
     }
 
     .footer-container {
-        flex-direction: column;
+        padding: 0 10px;
     }
-} */
+}
+
+ @media (max-width: 575px) {
+
+}
