@@ -722,6 +722,9 @@
     }
 
     /* buy bottom */
+    .p-15 {
+        padding: 0 15px;
+    }
     .buy-bottom .pl-120 {
         padding: 0;
     }
@@ -819,6 +822,10 @@
 
     .gift-content .gift-header-top {
         letter-spacing: 0;
+    }
+
+    .gift-content .gift-buy {
+        width: 50%;
     }
 
     .product-detail .heading-bottom {

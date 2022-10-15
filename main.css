@@ -50,6 +50,18 @@ html,body{
     overflow-x: hidden;
 }
 
+@keyframes shake-icon {
+    0% { transform: rotate(0); }
+    15% { transform: rotate(10deg); }
+    30% { transform: rotate(-10deg); }
+    45% { transform: rotate(9deg); }
+    60% { transform: rotate(-9deg); }
+    75% { transform: rotate(8deg); }
+    85% { transform: rotate(-8deg); }
+    92% { transform: rotate(6deg); }
+    100% { transform: rotate(0); }
+  }
+
 @keyframes slide-in-blurred-left {
     0% {
         -webkit-transform: translateX(-500px) scaleX(2.5) scaleY(.2);
@@ -155,6 +167,38 @@ html,body{
     height: 54px;
     line-height: 26px;
     box-shadow: 0 0 10px 0 #f1947f;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.buy-now a {
+    position: relative;
+    z-index: 4;
+}
+
+.buy-now::after {
+    content: "";
+    height: 100%;
+    width: 0%;
+    background: #f4b3a2;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 26px;
+    z-index: -1;
+    transition: width .25s linear;
+    
+}
+
+.buy-now:hover:after{
+    width: 100%;
+    z-index: 1;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 .mb-10 {
@@ -379,6 +423,10 @@ html,body{
     align-items: center;
 }
 
+.buy-top .buy-now a{
+    color: #240871;
+}
+
 .buy-product-container .product-buy-btn {
     display: flex;
     justify-content: center;
@@ -467,6 +515,7 @@ html,body{
 
 .gift > .container {
     z-index: 10;
+    position: relative;
 }
 
 .gift-overlay {
@@ -517,11 +566,15 @@ html,body{
 
 .gift-content .gift-buy {
     display: block;
-    width: 100%;
+    width: 30%;
     text-align: center;
     height: 54px;
     margin-top: 20px;
     cursor: pointer;
+}
+
+.gift-buy a {
+    color: #240871;
 }
 
 /* section select color */
@@ -831,7 +884,7 @@ html,body{
 .order-content .order-form {
     height: 520px;
     margin: 130px 20px 130px 0;
-    padding: 0 40px;
+    padding: 20px 40px;
     background-color: #fff;
     background-color: transparent;
     background-image: linear-gradient(110deg, #F1947F 20%, rgba(242, 41, 91, 0) 100%);
@@ -886,11 +939,41 @@ html,body{
     font-family: "Open Sans", Sans-serif;
     font-size: 22px;
     font-weight: 700;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
     padding: 9px 0 9px 0;
     color: #fff;
     text-transform: uppercase;
     text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.form-btn a {
+    position: relative;
+    z-index: 3;
+}
+
+.form-btn::after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: #305168;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 10px;
+    z-index: -1;
+    transition: width .25s linear;
+}
+
+.form-btn:hover:after {
+    width: 100%;
+    z-index: 2;
+}
+
+.order-form .form-btn a {
+    color: white;
 }
 
 /* -------- section buy bottom -------- */
@@ -1011,14 +1094,25 @@ html,body{
 }
 
 .list-social .social-item {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     margin-bottom: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     border-radius: 50%;
+    transition: all .15s linear;
+}
+
+/* .social-item:hover {
+    animation: shake-icon .5s cubic-bezier(.36,.07,.19,.97) both;
+    width: 60px;
+    height: 60px;
+} */
+
+.list-social .social-item i {
+    font-size: 20px;
 }
 
 .list-social .social-item a {
@@ -1046,7 +1140,6 @@ html,body{
     left: 20px;
 }
 
-.phone-icon {}
 
 .circle-line {
     width: 85px;

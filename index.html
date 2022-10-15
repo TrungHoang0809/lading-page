@@ -60,7 +60,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap"
         rel="stylesheet">
 
-
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="responsive.css">
     <title>Document</title>
@@ -176,7 +175,9 @@
                             <div class="buy-wrapper">
                                 <div class="buy-product-container">
                                     <div class="product-buy-btn">
-                                        <span class="buy-btn buy-now">Mua Ngay</span>
+                                        <span class="buy-btn buy-now">
+                                            <a href="">Mua Ngay</a>
+                                        </span>
                                         <ul class="time">
                                             <li>
                                                 <span class="number">00</span>
@@ -228,7 +229,9 @@
                                     alt="" class="gift-img">
                                 <h2 class="gift-header-bottom">QUÀ TẶNG ĐẶC BIỆT</h2>
                                 <div class="gift-buy">
-                                    <a href="#" class="gift-buy-btn buy-now">Mua Ngay</a>
+                                    <span class="buy-btn buy-now">
+                                        <a href="">Mua Ngay</a>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -464,20 +467,20 @@
                     <div class="row no-gutters">
                         <div class="order-content p-15">
                             <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 p-0 order-wrapper">
-                                <form class="order-form">
+                                <form id="order-form" class="order-form" >
                                     <h3 class="form-heading">Để lại thông tin để đặt hàng và nhận
                                         ngay ưu đãi Freeship!</h3>
                                     <p class="form-desc">
                                         Số lượng quà tặng và ưu đãi có giới hạn
                                     </p>
-                                    <input class="form-input" type="text" placeholder="Họ và tên">
-                                    <input class="form-input" type="text"
+                                    <input class="form-input" name="fullname" type="text" placeholder="Họ và tên">
+                                    <input name="phone-number" class="form-input" type="text"
                                         placeholder="Số điện thoại">
-                                    <input class="form-input" type="text" placeholder="Địa chỉ">
-                                    <textarea class="form-text-area" placeholder="Note"></textarea>
+                                    <input name="address" class="form-input" type="text" placeholder="Địa chỉ">
+                                    <textarea name="note" class="form-text-area" placeholder="Note"></textarea>
 
                                     <div class="form-btn">
-                                        đặt hàng ngay
+                                        <a href="#">đặt hàng ngay</a>
                                     </div>
                                 </form>
                             </div>
@@ -664,6 +667,7 @@
             </div>
         </div>
     </div>
+    <script src="./main.css" ></script>
 </body>
 
 </html>
